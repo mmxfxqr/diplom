@@ -46,6 +46,7 @@ const QuestionsAdmin = observer(() => {
               <th>Заголовок</th>
               <th>Суть</th>
               <th>ID Пользователя</th> {/* Добавляем столбец для отображения ID пользователя */}
+              <th>Email</th>
               <th>События</th>
             </tr>
           </thead>
@@ -56,6 +57,7 @@ const QuestionsAdmin = observer(() => {
                 <td>{appeal.title}</td>
                 <td>{appeal.body}</td>
                 <td>{appeal.idUser}</td> {/* Отображаем значение idUser */}
+                <td>user@mail.ru</td>
                 <td>
                   <Button
                     variant="danger"

@@ -36,7 +36,7 @@ const Cars = observer(() => {
   return (
     <div>
       <Header />
-      <Container>
+      <Container className={styles.tittleBlock}>
         <h1 className={styles.title}>Машины на продажу</h1>
         <p className={styles.description}>
           Компания Auto-Repair-Shop представляет вашему вниманию широкий выбор

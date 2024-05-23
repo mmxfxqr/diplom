@@ -4,7 +4,12 @@ import { observer } from "mobx-react-lite";
 import "../styles/UserMain.css";
 import Carousel from "react-bootstrap/Carousel";
 import Footer from "./Footer";
-
+import { Container } from "react-bootstrap";
+import svg1 from "../assets/mechanic-svgrepo-com.svg";
+import svg2 from "../assets/percent-svgrepo-com.svg";
+import svg3 from "../assets/sand-clock-svgrepo-com.svg";
+import svg4 from "../assets/wallet-svgrepo-com.svg";
+import car from "../assets/audi-rs5-spor-panjur.jpg";
 const UserMain = () => {
   return (
     <div>
@@ -32,6 +37,56 @@ const UserMain = () => {
           />
         </Carousel.Item>
       </Carousel>
+      <section className="section">
+        <Container className="sectionCon">
+          <div className="itemSec">
+            <img src={svg4}></img>
+            <div className="h3">Честные цены на обслуживание</div>
+            <div className="pSec">
+              Стоймость услуг обговаривается по телефону и личной встрече
+            </div>
+          </div>
+          <div className="itemSec">
+            <img src={svg2}></img>
+            <div className="h3">100% гарантия результата</div>
+            <div className="pSec">
+              АвтоМАСТЕР Курск предоставляет гарантию на каждую запчасть.
+            </div>
+          </div>
+          <div className="itemSec">
+            <img src={svg3}></img>
+            <div className="h3">Экономия вашего времени</div>
+            <div className="pSec">
+              Обслуживаем клиентов по удобному для вас графику с 10:00 до 20 :00
+            </div>
+          </div>
+          <div className="itemSec">
+            <img src={svg1}></img>
+            <div className="h3">Вежливый и приятный персонал</div>
+            <div className="pSec">
+              Мы помогаем нашим клиентам с решением их проблем!
+            </div>
+          </div>
+        </Container>
+      </section>
+      <section className="stageSec">
+        <h1>ЭТАПЫ РАБОТЫ</h1>
+        <Container className="stageCon">
+          <img src={car} className="imgCar"></img>
+          <div className="stageText">
+            <div className="stageItem">1. Вы оставляете заявку на сайте или звоните нам</div>
+            <div className="stageItem">
+              2. Мы согласовывем время, вы приезжаете и рассказываете все что
+              беспокоит вас в автомобиле
+            </div>
+            <div className="stageItem">3. Мы проводим диагностику и определяем проблемные места</div>
+            <div className="stageItem">4. Мы составляем смету, определяем сроки выполнения работ</div>
+            <div className="stageItem">5. Мы выполняем работы</div>
+            <div className="stageItem">6. Вы принимаете работу, наш мастер показывает что было сделано и по желанию вы можете забрать старые детали</div>
+            <div className="stageItem">7. Мы передаем вам отремонтированный автомобиль</div>
+          </div>
+        </Container>
+      </section>
       <section className="about-us">
         <div className="container">
           <div className="about-us-content">
@@ -64,7 +119,8 @@ const UserMain = () => {
           </div>
         </div>
       </section>
-      <Footer/>
+
+      <Footer />
     </div>
   );
 };

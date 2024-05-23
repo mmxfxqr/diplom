@@ -55,7 +55,7 @@ const LoginForm = () => {
         <div className={s.formFooter}>
           <div className="mt-3">
             <Link to="/registration" className={s.linkLogin}>
-              У вас уже есть аккаунт?
+              Зарегистрироваться
             </Link>
           </div>
           <Button variant="success" type="submit" className={s.submitBtn}>

@@ -12,10 +12,10 @@ const Questions = () => {
     <div className={s.questions}>
       <Header />
       <div className={s.acordeonCon}>
-      <h2 className={s.title}>Часто задаваемые вопросы</h2>
+        <h2 className={s.title}>Часто задаваемые вопросы</h2>
         <Accordion defaultActiveKey="0" className={s.acordeon}>
           <Accordion.Item eventKey="0" className={s.acordeonItem}>
-            <Accordion.Header>Какие услуги вы предоставляете?</Accordion.Header>
+            <Accordion.Header className={s.acordHeader}>Какие услуги вы предоставляете?</Accordion.Header>
             <Accordion.Body>
               Мы предлагаем широкий спектр услуг по ремонту автомобилей, включая
               замену масла, ремонт тормозов, диагностику двигателя, обслуживание
@@ -23,7 +23,7 @@ const Questions = () => {
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="1" className={s.acordeonItem}>
-            <Accordion.Header>Как часто нужно менять масло?</Accordion.Header>
+            <Accordion.Header className={s.acordHeader}>Как часто нужно менять масло?</Accordion.Header>
             <Accordion.Body>
               Рекомендуется менять масло каждые 3,000 - 5,000 миль, в
               зависимости от марки и модели вашего автомобиля, а также от ваших
@@ -31,7 +31,7 @@ const Questions = () => {
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="2" className={s.acordeonItem}>
-            <Accordion.Header>
+            <Accordion.Header className={s.acordHeader}>
               Вы предоставляете бесплатные оценки?
             </Accordion.Header>
             <Accordion.Body>
@@ -41,14 +41,14 @@ const Questions = () => {
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="3" className={s.acordeonItem}>
-            <Accordion.Header>Ваши механики сертифицированы?</Accordion.Header>
+            <Accordion.Header className={s.acordHeader}>Ваши механики сертифицированы?</Accordion.Header>
             <Accordion.Body>
               Все наши механики сертифицированы ASE и имеют большой опыт в
               ремонте и техническому обслуживанию автомобилей.
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="4" className={s.acordeonItem}>
-            <Accordion.Header>
+            <Accordion.Header className={s.acordHeader}>
               Вы предоставляете гарантию на свои услуги?
             </Accordion.Header>
             <Accordion.Body>
@@ -57,7 +57,7 @@ const Questions = () => {
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="5" className={s.acordeonItem}>
-            <Accordion.Header>Как записаться на обслуживание?</Accordion.Header>
+            <Accordion.Header className={s.acordHeader}>Как записаться на обслуживание?</Accordion.Header>
             <Accordion.Body>
               Вы можете записаться на обслуживание, позвонив нам по телефону или
               заполнив форму на нашем сайте. Мы свяжемся с вами для
@@ -65,7 +65,7 @@ const Questions = () => {
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="6" className={s.acordeonItem}>
-            <Accordion.Header>Как долго продлится ремонт?</Accordion.Header>
+            <Accordion.Header className={s.acordHeader}>Как долго продлится ремонт?</Accordion.Header>
             <Accordion.Body>
               Время ремонта зависит от сложности работы. Мы постараемся
               завершить все работы как можно быстрее, чтобы вы могли вернуться к
@@ -73,7 +73,7 @@ const Questions = () => {
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="7" className={s.acordeonItem}>
-            <Accordion.Header>
+            <Accordion.Header className={s.acordHeader}>
               Могу ли я ожидать ремонта на месте?
             </Accordion.Header>
             <Accordion.Body>
@@ -83,7 +83,7 @@ const Questions = () => {
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="8" className={s.acordeonItem}>
-            <Accordion.Header>
+            <Accordion.Header className={s.acordHeader}>
               Вы используете оригинальные запчасти?
             </Accordion.Header>
             <Accordion.Body>
@@ -92,7 +92,7 @@ const Questions = () => {
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="9" className={s.acordeonItem}>
-            <Accordion.Header>Предоставляете ли вы скидки?</Accordion.Header>
+            <Accordion.Header className={s.acordHeader}>Предоставляете ли вы скидки?</Accordion.Header>
             <Accordion.Body>
               Да, мы предлагаем различные скидки и акции для наших постоянных
               клиентов, а также сезонные предложения. Следите за обновлениями на
