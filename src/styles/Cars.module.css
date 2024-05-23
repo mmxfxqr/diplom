@@ -1,0 +1,84 @@
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.description {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 18px;
+  color: #555;
+}
+
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  width: calc(33.333% - 20px); 
+  margin-bottom: 30px;
+  background-color: #ffffffbd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+@media (max-width: 992px) {
+  .card {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 576px) {
+  .card {
+    width: calc(100% - 20px);
+  }
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.cardImg {
+  height: 250px;
+  object-fit: cover;
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardText {
+  flex-grow: 1;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.alertSuccess {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: #d4edda;
+  color: #155724;
+  padding: 10px;
+  border: 1px solid #c3e6cb;
+  border-radius: 4px;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}

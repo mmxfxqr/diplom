@@ -1,0 +1,21 @@
+/* Questions.module.css */
+.acordeon {
+  width: 1310px;
+}
+
+.acordeonCon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.acordeonItem:not(:first-child) {
+  border-top: 1px solid #dee2e6; 
+  margin-top: 15px;
+}
+.title{
+    margin-bottom: 20px;
+    margin-top: 5rem;
+}

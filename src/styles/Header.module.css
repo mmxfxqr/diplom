@@ -1,0 +1,56 @@
+.navBar {
+  position: relative;
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.brandLink {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navLinks {
+  display: flex;
+  justify-content: center;
+  
+}
+
+.navBar a {
+  color: #fff !important;
+  text-decoration: none !important;
+  font-weight: bold;
+  margin-right: 30px;
+  transition: color 0.3s ease; 
+}
+
+.navBar a:hover {
+  color: rgb(197, 171, 123) !important; 
+}
+
+.navBar a:active {
+  color: rgb(197, 171, 123) !important; 
+}
+.logoImg {
+  width: 80px;
+  height: 60px;
+  margin-right: 10px;
+  fill: #fff; 
+  transition: fill 0.3s ease; 
+}
+
+.logoImg:hover {
+  fill: #ff8c00; 
+}
