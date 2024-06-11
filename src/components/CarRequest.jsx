@@ -42,7 +42,7 @@ const CarRequest = observer(() => {
                     variant="danger"
                     onClick={() => handleDelete(order.id)}
                   >
-                    Delete
+                    Удалить
                   </Button>
                 </td>
               </tr>

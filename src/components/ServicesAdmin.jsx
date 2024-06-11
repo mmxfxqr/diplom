@@ -83,17 +83,17 @@ const ServicesAdmin = observer(() => {
                 <td>{service.idTypeServices}</td>
                 <td>
                   <Button
-                    variant="primary"
-                    className="mr-2"
+                    variant="info"
+                    className="mb-2"
                     onClick={() => handleShowEditModal(service.id)}
                   >
-                    Edit
+                    Редактировать
                   </Button>
                   <Button
                     variant="danger"
                     onClick={() => handleDelete(service.id)}
                   >
-                    Delete
+                    Удалить
                   </Button>
                 </td>
               </tr>
@@ -103,10 +103,10 @@ const ServicesAdmin = observer(() => {
 
         <Button
           variant="success"
-          className="float-right mt-3"
+          className="float-right mt-3 mb-3"
           onClick={handleShowAddModal}
         >
-          Add Service
+          Добавить
         </Button>
       </Container>
     </div>

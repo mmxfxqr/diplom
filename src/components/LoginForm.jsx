@@ -16,7 +16,7 @@ const LoginForm = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     if (!login || !password) {
-      setError("Please enter both login and password");
+      setError("Пожалуйста, заполните оба поля!");
       return;
     }
     try {
@@ -24,7 +24,7 @@ const LoginForm = () => {
       await userStore.login(login, password); 
       navigate("/main");
     } catch (error) {
-      setError("Login failed. Please check your credentials.");
+      setError("Авторизация не удалась, пожалуйста проверьте логин и пароль!");
     }
 };
 
@@ -36,7 +36,7 @@ const LoginForm = () => {
           <Form.Label>Логин</Form.Label>
           <Form.Control
             type="text"
-            placeholder="Enter login"
+            placeholder="Введите логин"
             value={login}
             onChange={(e) => setLogin(e.target.value)}
           />
@@ -45,7 +45,7 @@ const LoginForm = () => {
           <Form.Label>Пароль</Form.Label>
           <Form.Control
             type="password"
-            placeholder="Password"
+            placeholder="Пароль"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />

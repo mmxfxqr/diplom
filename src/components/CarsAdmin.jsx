@@ -74,13 +74,13 @@ const CarsAdmin = observer(() => {
                   <td>{car.vin}</td>
                   <td>
                     <Button variant="info" onClick={() => handleEditCar(car)}>
-                      Edit
+                      Редактировать
                     </Button>{" "}
                     <Button
                       variant="danger"
                       onClick={() => handleDeleteCar(car.id)}
                     >
-                      Delete
+                      Удалить
                     </Button>
                   </td>
                 </tr>
@@ -88,7 +88,7 @@ const CarsAdmin = observer(() => {
           </tbody>
         </Table>
         <Button variant="success" onClick={handleAddCar}>
-          Add Car
+          Добавить
         </Button>
 
         {/* Модалка для добавления автомобиля */}

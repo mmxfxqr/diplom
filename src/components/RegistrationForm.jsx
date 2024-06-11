@@ -28,7 +28,7 @@ const RegistrationForm = () => {
                     <Form.Label>Имя</Form.Label>
                     <Form.Control
                         type="text"
-                        placeholder="Enter name"
+                        placeholder="Введите имя"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                     />
@@ -38,7 +38,7 @@ const RegistrationForm = () => {
                     <Form.Label>Почта</Form.Label>
                     <Form.Control
                         type="email"
-                        placeholder="Enter email"
+                        placeholder="Введите почту"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                     />
@@ -48,7 +48,7 @@ const RegistrationForm = () => {
                     <Form.Label>Телефон</Form.Label>
                     <Form.Control
                         type="text"
-                        placeholder="Enter phone"
+                        placeholder="Введите телефон"
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
                     />
@@ -58,7 +58,7 @@ const RegistrationForm = () => {
                     <Form.Label>Адрес</Form.Label>
                     <Form.Control
                         type="text"
-                        placeholder="Enter address"
+                        placeholder="Введите адрес"
                         value={address}
                         onChange={(e) => setAddress(e.target.value)}
                     />
@@ -68,7 +68,7 @@ const RegistrationForm = () => {
                     <Form.Label>Логин</Form.Label>
                     <Form.Control
                         type="text"
-                        placeholder="Enter login"
+                        placeholder="Введите логин"
                         value={login}
                         onChange={(e) => setLogin(e.target.value)}
                     />
@@ -78,7 +78,7 @@ const RegistrationForm = () => {
                     <Form.Label>Пароль</Form.Label>
                     <Form.Control
                         type="password"
-                        placeholder="Password"
+                        placeholder="Введите пароль"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                     />

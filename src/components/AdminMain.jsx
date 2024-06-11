@@ -8,7 +8,7 @@ const AdminMain = () => {
     <div>
       <AdminHeader />
       <Container className="admin-main-container">
-        <h1 className="admin-panel-text">ADMIN PANEL</h1>
+        <h1 className="admin-panel-text">АДМИН ПАНЕЛЬ</h1>
       </Container>
     </div>
   );

@@ -71,7 +71,7 @@ const Services = observer(() => {
                     variant="success"
                     onClick={() => handleOrderClick(service.id)}
                   >
-                    Order
+                    Заказать
                   </Button>
                   {orderSuccess[service.id] && (
                     <div
