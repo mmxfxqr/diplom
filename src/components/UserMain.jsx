@@ -32,7 +32,7 @@ const UserMain = () => {
         <Carousel.Item>
           <img
             className="d-block imgSlider w-100"
-            src="https://carsmotion.ru/wp-content/uploads/2022/03/remont_inomarok.jpg"
+            src="https://blogs.gestion.pe/innovar-o-ser-cambiado/wp-content/uploads/sites/113/2015/06/GL-ColorTiles.jpg"
             alt="Third slide"
           />
         </Carousel.Item>
