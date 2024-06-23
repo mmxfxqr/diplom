@@ -17,7 +17,7 @@ const RegistrationForm = () => {
     const navigate = useNavigate()
     const handleSubmit = async (event) => {
         event.preventDefault();
-        await userStore.register({ name, email, phone, address, login, password });
+        await userStore.register({ name, email, phone, address, login, password, idTypeUser: 2 });
         navigate('/main')
     };
 
