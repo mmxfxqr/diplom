@@ -57,7 +57,7 @@ const UserMain = () => {
             <img src={svg3}></img>
             <div className="h3">Экономия вашего времени</div>
             <div className="pSec">
-              Обслуживаем клиентов по удобному для вас графику с 10:00 до 20 :00
+              Обслуживаем клиентов по удобному для вас графику с 10:00 до 20:00
             </div>
           </div>
           <div className="itemSec">

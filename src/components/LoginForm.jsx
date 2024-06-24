@@ -26,8 +26,7 @@ const LoginForm = () => {
     } catch (error) {
       setError("Авторизация не удалась, пожалуйста проверьте логин и пароль!");
     }
-};
-
+  };
 
   return (
     <div className={s.mainFormContainer}>
@@ -50,8 +49,7 @@ const LoginForm = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
         </Form.Group>
-        {error && <div className="text-danger">{error}</div>}{' '}
-        {/* Отображаем сообщение об ошибке, если есть */}
+        {error && <div className="text-danger">{error}</div>}
         <div className={s.formFooter}>
           <div className="mt-3">
             <Link to="/registration" className={s.linkLogin}>
