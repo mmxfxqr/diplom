@@ -2,7 +2,7 @@ import React, { useEffect, useContext, useState } from "react";
 import { Context } from "../main";
 import { observer } from "mobx-react-lite";
 import Header from "./Header";
-import { Card, Button, Container } from "react-bootstrap";
+import { Card, Button, Container, Modal } from "react-bootstrap";
 import styles from "../styles/Cars.module.css";
 import CarService from "../services/Cars/CarService";
 import Footer from "./Footer";
@@ -10,6 +10,7 @@ import Footer from "./Footer";
 const Cars = observer(() => {
   const { carStore, userStore } = useContext(Context);
   const [orderSuccess, setOrderSuccess] = useState({});
+  const [showModal, setShowModal] = useState(false);
 
   const handleBuyClick = async (idCarSales) => {
     try {
@@ -20,6 +21,7 @@ const Cars = observer(() => {
       const response = await CarService.createOrder(idCarSales, userId);
       console.log(response);
       setOrderSuccess((prev) => ({ ...prev, [idCarSales]: true }));
+      setShowModal(true); // Показать модальное окно
       setTimeout(() => {
         setOrderSuccess((prev) => ({ ...prev, [idCarSales]: false }));
       }, 3000);
@@ -27,6 +29,10 @@ const Cars = observer(() => {
       console.error("Error creating order:", error);
       setOrderSuccess((prev) => ({ ...prev, [idCarSales]: false }));
     }
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
   };
 
   useEffect(() => {
@@ -82,7 +88,22 @@ const Cars = observer(() => {
           ))}
         </div>
       </Container>
-      <Footer/>
+      <Footer />
+
+      {/* Модальное окно */}
+      <Modal show={showModal} onHide={handleCloseModal}>
+        <Modal.Header closeButton>
+          <Modal.Title>Информация</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          Чтобы купить авто, обратитесь по телефону: +7-919-210-05-05
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleCloseModal}>
+            Закрыть
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </div>
   );
 });

@@ -2,13 +2,14 @@ import React, { useEffect, useContext, useState } from "react";
 import { observer } from "mobx-react-lite";
 import Header from "./Header";
 import { Context } from "../main";
-import { Card, Button, Container } from "react-bootstrap";
+import { Card, Button, Container, Modal } from "react-bootstrap";
 import s from "../styles/Service.module.css";
 import Footer from "./Footer";
 
 const Services = observer(() => {
   const { serviceStore } = useContext(Context);
   const [orderSuccess, setOrderSuccess] = useState({});
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     serviceStore.getServices();
@@ -24,6 +25,7 @@ const Services = observer(() => {
     try {
       await serviceStore.createOrder(idService, userId);
       setOrderSuccess((prev) => ({ ...prev, [idService]: true }));
+      setShowModal(true); // Показать модальное окно
       setTimeout(() => {
         setOrderSuccess((prev) => ({ ...prev, [idService]: false }));
       }, 3000);
@@ -31,6 +33,10 @@ const Services = observer(() => {
       console.error("Error creating order:", error);
       setOrderSuccess((prev) => ({ ...prev, [idService]: false }));
     }
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
   };
 
   return (
@@ -58,12 +64,12 @@ const Services = observer(() => {
               <Card.Body className={s.cardBody}>
                 <Card.Title className={s.cardTitle}>{service.name}</Card.Title>
                 <Card.Text className={s.cardText}>
-                    <strong>Описание:</strong> {service.descriptions}
-                    <br />
-                    <div className={s.priceContainer}>
-                      <strong className={s.priceLabel}>Цена от:</strong>
-                      <span className={s.price}>{service.cost} рублей</span>
-                    </div>
+                  <strong>Описание:</strong> {service.descriptions}
+                  <br />
+                  <div className={s.priceContainer}>
+                    <strong className={s.priceLabel}>Цена от:</strong>
+                    <span className={s.price}>{service.cost} рублей</span>
+                  </div>
                 </Card.Text>
                 <div className={s.buttonContainer}>
                   <Button
@@ -88,6 +94,21 @@ const Services = observer(() => {
         </div>
       </Container>
       <Footer />
+
+      {/* Модальное окно */}
+      <Modal show={showModal} onHide={handleCloseModal}>
+        <Modal.Header closeButton>
+          <Modal.Title>Информация</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          Чтобы заказать услугу, обратитесь по телефону: +7-919-210-05-05
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleCloseModal}>
+            Закрыть
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </div>
   );
 });
