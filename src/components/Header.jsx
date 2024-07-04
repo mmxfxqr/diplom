@@ -17,7 +17,7 @@ const Header = () => {
         <Navbar.Brand className={s.logo}>
           <Link to="/main" className={s.brandLink}>
             <img src={logo} className={s.logoImg} alt="Logo" />
-            АвтоМастер
+            Автосервис ARM
           </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
